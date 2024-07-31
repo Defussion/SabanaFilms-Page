@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="uft-8">
+        <meta name="vieport" content="widht-device-widht,initial-scale=1.0">
+        <title>Sabana Films</title>
+        <link rel="stylesheet" href="sumbit.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d9e3d8cd36.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <header>
+            <a href="index.html"class="brand">Sabana Films</a>
+         
+          
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="index.html">Inicio</a>
+                    <a href="peliculas.html">Films</a>
+                    <a href="quienessomos.html">Acerca de Nosotros</a>
+                    <a href="doc.html">Documentos</a>
+                    <a href="registro.html">Únete</a>
+                </div>
+            </div>
+        </header>
+        <section class="forms">
+            <div class="content">
+                <form onsubmit="sendEmail()">
+                    <h3>HABLEMOS!</h3>
+                    
+                    <input type="text" id="nombre" placeholder="Tú nombre" required>
+                    <input type="email" id="email" placeholder="Correo Electronico" required>
+                    <input type="text" id="telefono" placeholder="Número de Celular" required>
+                    <textarea id="message" rows="4" placeholder="Cuentanos de ti"></textarea>
+                    <button type="submit"> Enviar </button>
+
+                </form>
+
+               
+            </div>
+            <script src=" https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                    function sendEmail(){
+                        Email.send({
+                            Host : "smtp.elasticemail.com",
+                            Username : "username",
+                            Password : "password",
+                            To : 'them@website.com',
+                            From : "you@isp.com",
+                            Subject : "This is the subject",
+                            Body : "And this is the body"
+                        }).then(
+                        message => alert(message)
+                        );  
+                    }
+
+            </script>
+        
+        </section>
+        <div class="footer">
+            <div>
+                © 2023 Sabana Films Producciones S.A.S. Todos los derechos reservados
+            </div>
+
+            <div class="Adicional">
+               <pre>
+                <b>
+                    Terminos de Uso  
+                </b>
+                <b>
+                    Politicas de Privacidad
+                </b>
+               </pre>
+            </div>
+
+        </div>
+
+        
+    </body>
+
+</html>

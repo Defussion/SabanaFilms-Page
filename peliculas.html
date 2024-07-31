@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="uft-8">
+        <meta name="vieport" content="widht-device-widht,initial-scale=1.0">
+        <title>Sabana Films</title>
+        <link rel="stylesheet" href="peliculas.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d9e3d8cd36.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"class="brand">Sabana Films</a>
+         
+          
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="index.html">Inicio</a>
+                    <a href="peliculas.html">Films</a>
+                    <a href="quienessomos.html">Acerca de Nosotros</a>
+                    <a href="doc.html">Documentos</a>
+                    <a href="registro.html">Únete</a>
+                </div>
+            </div>
+        </header>
+        <section class="sec-01">
+            <div class="container">
+                <h2 class="main-title">Peliculas</h2>
+                <div class="contet">
+                    <div class="image">
+                        <img src="img1.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>La Manzana</h3>
+                        <p>La manzana es un cortometraje animado que cuenta la historia de un intrepido gato y su amigo el perro, en una busqueda por aquello que parece no extistir más</p>
+
+                    </div>
+                </div> 
+                <div class="media-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UCB3q88FyCjb-Ztvtd52s7Fg"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.behance.net/sabanafilms"><i class="fa-brands fa-behance"> </i></a>
+                </div>
+            </div>
+        
+        </section>
+        <section class="sec-02">
+            <div class="container">
+                <h3 class="section-title">Rastro en Disociacion</h3>
+                <div class="contet">
+                    <div class="image">
+                        <img src="img2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h4 class="info-title">Sinopsis</h4>
+                        <p>
+                            Un par de detectives se ven envueltos en una encrujida por atrapar a autor de multiples asesinatos, mientras deben lidiar
+                            con las pistas inconexas  que esta deja,que pronto les revelera un terrible realidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-03">
+            <div class="container">
+                <h3 class="section-title">Lunes, Otra Vez</h3>
+                <div class="contet">
+                    <div class="media-info">
+                        <li><a href="https://www.behance.net/sabanafilms"><i class="fa-brands fa-behance"> Behance</i></a></li>
+                        <li><a href="https://youtu.be/pwcynvEypDM"><i class="fa-brands fa-youtube"> Youtube</i></a></li>
+                    </div>
+                    <div class="image">
+                        <img src="img3.jpg" alt="">
+                    </div> 
+
+                </div>
+            </div>
+
+        </section>
+
+        <script>
+            ScrollReveal({
+                //reset:true,
+                distance: '60px',
+                duration: 2500,
+                delay: 400
+
+
+            });
+
+            ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left'});
+            ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom'});
+            ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right'});
+            ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 250 });
+            ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+            ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+            
+
+        </script>
+
+    
+
+       
+        <script type="text/javascript">
+
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+    
+            menuBtn.addEventListener("click",() => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });    
+            
+            const btns =document.querySelectorAll(".nav-btn");
+           
+            var sliderNav= function(manual){
+                btns.forEach((btn)=>{
+                    btn.classList.remove("active");
+                });
+    
+                btns[manual].classList.add("active");
+              
+    
+            }
+            </script>
+        
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

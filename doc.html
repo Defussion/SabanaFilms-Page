@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="uft-8">
+        <meta name="vieport" content="widht-device-widht,initial-scale=1.0">
+        <title>Sabana Films</title>
+        <link rel="stylesheet" href="style3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d9e3d8cd36.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <header>
+            <a href="index.html"class="brand">Sabana Films</a>
+         
+          
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="index.html">Inicio</a>
+                    <a href="peliculas.html">Films</a>
+                    <a href="quienessomos.html">Acerca de Nosotros</a>
+                    <a href="doc.html">Documentos</a>
+                    <a href="registro.html">Únete</a>
+                </div>
+            </div>
+        </header>
+        <section class="home">
+            <div class="content">
+                <h1 class="titular" style="text-align:center"> Documentos </h1>
+                <div class="t-1">Organigrama
+                    <p> Para ver el Organigrama le recomendamos hacer click encima de la imagen.</p>
+                    <img class="orga" src="Organigrama.jpg">
+                    
+                </div>
+                <div class="t-2">Información Legal y<br> Estudios de mercado
+                    <br>
+                    <a class="btndoc" href="https://drive.google.com/file/d/1aalULZFY62ZpT8gwrZt1_J4NU9aO1lPz/view?usp=share_link">Ver anexos</a>
+                    <br>
+                </div> 
+                <br>
+                <br>
+                <div class="t-2">Contratos
+                    <a class="btndoc" href="https://drive.google.com/drive/folders/1u6I5yjsgdTs5OkuG26w51q3NwXLcOxZS?usp=share_link">Ver anexos</a>
+
+                </div>
+            </div>
+                         
+        
+        
+        </section>
+        <div class="footer">
+            <div>
+                © 2023 Sabana Films Producciones S.A.S. Todos los derechos reservados
+            </div>
+
+            <div class="Adicional">
+               <pre>
+                <b>
+                    Terminos de Uso  
+                </b>
+                <b>
+                    Politicas de Privacidad
+                </b>
+               </pre>
+            </div>
+
+        </div>
+        <script type="text/javascript">
+
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+    
+            menuBtn.addEventListener("click",() => {
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });    
+            
+            const btns =document.querySelectorAll(".nav-btn");
+           
+            var sliderNav= function(manual){
+                btns.forEach((btn)=>{
+                    btn.classList.remove("active");
+                });
+    
+                btns[manual].classList.add("active");
+              
+    
+            }
+            </script>
+
+        
+    </body>
+
+</html>

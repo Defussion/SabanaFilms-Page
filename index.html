@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="uft-8">
+        <meta name="vieport" content="widht-device-widht,initial-scale=1.0">
+        <title>Sabana Films</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d9e3d8cd36.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <header>
+            <a href="index.html"class="brand">Sabana Films</a>
+         
+          
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="index.html">Inicio</a>
+                    <a href="peliculas.html">Films</a>
+                    <a href="quienessomos.html">Acerca de Nosotros</a>
+                    <a href="doc.html">Documentos</a>
+                    <a href="registro.html">Únete</a>
+                </div>
+            </div>
+        </header>
+        <section class="home">
+            <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+
+            <div class="content">
+                <h1>Explora<br><span>nuestras cintas</span></h1>
+                <p>
+                    Encuentra nuevas experiencias visuales y sonoras con un elemento como referencia: la creatividad. Traidas por jovenes colombianos llenos de talento cinematografico
+                </p>
+                <a href="#">Ver más</a>
+            </div>
+            <div class="media-icons">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+
+            </div>
+        </section>
+
+        <script type="text/javascript">
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",() => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });    
+        
+        const btns =document.querySelectorAll(".nav-btn");
+        const slides =document.querySelectorAll(".video-slide");
+        
+        var sliderNav= function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide)=>{
+                slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+
+        }
+        btns.forEach((btn,i)=>{
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            });
+        });
+        </script>
+    </body>
+
+</html>
